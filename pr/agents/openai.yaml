@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR"
+  short_description: "Cria PRs com testes e changelog"
+  default_prompt: "Use $pr para validar todos os testes, criar um PR com titulo claro e gerar o changelog completo."
