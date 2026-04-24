@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Commits PT-BR"
+  short_description: "Commits Conventional por escopo em portugues"
+  default_prompt: "Use $git-conventional-commits-pt-br para revisar minhas alteracoes e criar commits por escopo em portugues."
