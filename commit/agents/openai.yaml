@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit"
+  short_description: "Commits Conventional por escopo"
+  default_prompt: "Use $commit para revisar minhas alteracoes, inferir o idioma pelo historico e criar commits por escopo."

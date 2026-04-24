@@ -1,9 +1,9 @@
 ---
-name: git-conventional-commits-pt-br
-description: Use esta skill ao criar, organizar, revisar ou explicar commits Git. Aplica Conventional Commits com mensagens em portugues do Brasil e separa commits por escopo, revisando status e diff antes de staged/commit.
+name: commit
+description: Use esta skill ao criar, organizar, revisar ou explicar commits Git. Aplica Conventional Commits, separa commits por escopo e escolhe entre portugues ou ingles analisando as mensagens recentes do historico do repositorio.
 ---
 
-# Git Conventional Commits PT-BR
+# Commit
 
 ## Objetivo
 
@@ -11,29 +11,39 @@ Use esta skill para transformar alteracoes locais em commits Git pequenos,
 coerentes e rastreaveis. O padrao obrigatorio e:
 
 - Conventional Commits.
-- Mensagens de commit em portugues do Brasil.
 - Um commit por escopo funcional ou tecnico.
+- Mensagens no mesmo idioma predominante do historico recente do repositorio:
+  portugues ou ingles.
 
 ## Fluxo
 
 1. Inspecione o estado do repositorio:
    `git status --short --branch`.
-2. Leia as alteracoes antes de preparar commits:
+2. Analise o idioma do historico recente antes de escrever mensagens:
+   `git log --format=%s -n 30`.
+3. Decida o idioma do resumo e do corpo do commit:
+   - Use portugues quando a maioria das mensagens recentes estiver em
+     portugues.
+   - Use ingles quando a maioria das mensagens recentes estiver em ingles.
+   - Se houver empate, historico insuficiente ou mistura forte, use o idioma
+     das mensagens mais recentes que seguem o padrao do projeto.
+   - Se ainda nao houver sinal claro, use portugues.
+4. Leia as alteracoes antes de preparar commits:
    `git diff`, `git diff --cached` e, quando houver arquivos novos,
    `git diff --no-index /dev/null <arquivo>` ou leitura direta do arquivo.
-3. Identifique escopos independentes. Um escopo e a menor area responsavel
+5. Identifique escopos independentes. Um escopo e a menor area responsavel
    que explica a mudanca, como `auth`, `supabase`, `docs`, `ci`, `ui`,
    `finance`, `tests` ou o nome de um modulo local.
-4. Agrupe arquivos e hunks por escopo. Use `git add <paths>` para escopos
+6. Agrupe arquivos e hunks por escopo. Use `git add <paths>` para escopos
    simples e `git add -p` quando o mesmo arquivo misturar mudancas de
    escopos diferentes.
-5. Valide o que sera commitado com `git diff --cached --check` e
+7. Valide o que sera commitado com `git diff --cached --check` e
    `git diff --cached --stat`. Rode testes, lint ou typecheck relevantes
    quando forem baratos e proporcionais ao risco.
-6. Crie um commit por escopo. Depois de cada commit, confira que o proximo
+8. Crie um commit por escopo. Depois de cada commit, confira que o proximo
    escopo ainda esta limpo com `git status --short`.
-7. Ao final, mostre os commits criados com `git log --oneline -n <quantidade>`
-   e informe as validacoes executadas.
+9. Ao final, mostre os commits criados com `git log --oneline -n <quantidade>`,
+   o idioma escolhido e as validacoes executadas.
 
 ## Regras De Escopo
 
@@ -51,7 +61,7 @@ coerentes e rastreaveis. O padrao obrigatorio e:
 Use sempre:
 
 ```text
-type(scope): resumo em portugues
+type(scope): resumo no idioma escolhido
 ```
 
 Tipos permitidos:
@@ -72,17 +82,21 @@ Regras do cabecalho:
 
 - O `scope` deve ser curto, sem espacos e sem acentos. Use kebab-case se
   precisar de mais de uma palavra.
-- O resumo deve estar em portugues, em minusculas, sem ponto final.
-- Prefira verbos claros no presente: `adiciona`, `corrige`, `ajusta`,
-  `remove`, `documenta`, `separa`, `simplifica`, `atualiza`.
-- Evite resumos genericos como `update`, `ajustes`, `wip`, `misc` ou
-  `corrige coisas`.
-- Use corpo em portugues quando a motivacao ou o impacto nao couberem no
-  cabecalho.
+- O resumo deve estar no idioma escolhido, em minusculas, sem ponto final.
+- Em portugues, prefira verbos claros no presente: `adiciona`, `corrige`,
+  `ajusta`, `remove`, `documenta`, `separa`, `simplifica`, `atualiza`.
+- Em ingles, prefira verbos claros no presente: `add`, `fix`, `adjust`,
+  `remove`, `document`, `split`, `simplify`, `update`.
+- Evite resumos genericos como `update`, `changes`, `ajustes`, `wip`, `misc`
+  ou `corrige coisas`.
+- Use corpo no mesmo idioma do cabecalho quando a motivacao ou o impacto nao
+  couberem no resumo.
 - Para breaking changes, use `!` no cabecalho e inclua corpo com
   `BREAKING CHANGE:`.
 
 ## Exemplos
+
+Portugues:
 
 ```text
 feat(auth): adiciona reaproveitamento transitorio do perfil
@@ -93,11 +107,23 @@ refactor(ui): separa estado visual do card de renovacao
 ci(eas): ajusta pipeline de build preview
 ```
 
+Ingles:
+
+```text
+feat(auth): add transient profile reuse
+fix(supabase): fix subscription rpc authorization
+docs(git): document scoped commit flow
+test(finance): cover renegotiation without paid installments
+refactor(ui): split renewal card view state
+ci(eas): adjust preview build pipeline
+```
+
 ## Resposta Ao Usuario
 
 Depois de criar commits, responda de forma curta com:
 
 - Lista dos commits criados, com hash curto e mensagem.
 - Escopo de cada commit quando houver mais de um.
+- Idioma escolhido e motivo breve, com base no historico recente.
 - Validacoes executadas ou motivo para nao executar.
 - Estado final do `git status --short`.
