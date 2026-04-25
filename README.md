@@ -21,3 +21,5 @@ CODEX_SKILLS_DIR=/caminho/para/skills ./scripts/install-skills.sh
   Conventional Commits e inferindo portugues ou ingles pelo historico recente.
 - `pr`: orienta criacao de pull requests com todos os testes executados antes
   da submissao, titulo claro e changelog completo para revisao.
+- `pr-review`: orienta revisoes tecnicas completas de pull requests por numero
+  ou link, com analise de riscos e comentarios descritivos no diff.

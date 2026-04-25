@@ -1,0 +1,4 @@
+interface:
+  display_name: "PR Review"
+  short_description: "Revisa PRs e comenta riscos"
+  default_prompt: "Use $pr-review para analisar este PR, comentar riscos no diff e resumir a decisao da revisao."
