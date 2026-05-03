@@ -23,3 +23,6 @@ CODEX_SKILLS_DIR=/caminho/para/skills ./scripts/install-skills.sh
   da submissao, titulo claro e changelog completo para revisao.
 - `pr-review`: orienta revisoes tecnicas completas de pull requests por numero
   ou link, com analise de riscos e comentarios descritivos no diff.
+- `sb-migration`: orienta a aplicacao de SQLs da diff local no Supabase local,
+  gera uma nova migration com `supabase db diff` e infere o idioma do nome pelo
+  historico de migrations.

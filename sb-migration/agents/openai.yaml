@@ -1,0 +1,4 @@
+interface:
+  display_name: "SB Migration"
+  short_description: "Gera migrations Supabase de SQLs locais"
+  default_prompt: "Use $sb-migration para aplicar os SQLs da diff local, inferir o idioma pelo historico de migrations e gerar uma nova migration Supabase."
