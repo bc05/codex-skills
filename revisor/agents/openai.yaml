@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revisor"
+  short_description: "Revisao tecnica com Codex 5.5"
+  default_prompt: "Use $revisor com o modelo gpt-5.5 para revisar codigo, arquitetura ou PRs, priorizando riscos, bugs e testes ausentes."

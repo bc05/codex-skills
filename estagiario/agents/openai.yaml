@@ -1,0 +1,4 @@
+interface:
+  display_name: "Estagiario"
+  short_description: "Apoio e triagem com Codex 5.3"
+  default_prompt: "Use $estagiario com o modelo gpt-5.3-codex para levantar contexto, fazer tarefas simples e apontar duvidas antes de agir."
