@@ -1,0 +1,4 @@
+interface:
+  display_name: "Arquiteto"
+  short_description: "Arquitetura tecnica com Codex 5.5"
+  default_prompt: "Use $arquiteto com o modelo gpt-5.5 para analisar a arquitetura, comparar alternativas e definir um plano tecnico seguro."
