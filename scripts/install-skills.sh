@@ -7,7 +7,7 @@ TARGET_DIR="${CODEX_SKILLS_DIR:-$HOME/.codex/skills}"
 
 mkdir -p "$TARGET_DIR"
 
-for legacy_name in git-conventional-commits-pt-br; do
+for legacy_name in git-conventional-commits-pt-br implementador; do
   legacy_path="$TARGET_DIR/$legacy_name"
 
   if [ -L "$legacy_path" ]; then

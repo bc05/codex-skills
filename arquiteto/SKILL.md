@@ -76,7 +76,9 @@ evidencia.
 
 ## Handoff
 
-- Para execucao, entregue passos para o perfil `implementador`.
+- Para execucao, entregue passos para o perfil `implementador-pleno`.
+- Para execucao critica ou de alto risco, entregue passos para o perfil
+  `implementador-senior`.
 - Para auditoria, entregue criterios e riscos para o perfil `revisor`.
 - Para levantamento inicial de baixo risco, delegue coleta factual ao perfil
   `estagiario`.

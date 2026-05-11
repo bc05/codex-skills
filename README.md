@@ -23,8 +23,10 @@ CODEX_SKILLS_DIR=/caminho/para/skills ./scripts/install-skills.sh
   Conventional Commits e inferindo portugues ou ingles pelo historico recente.
 - `estagiario`: orienta triagem, levantamento de contexto e tarefas simples com
   modelo-alvo Codex 5.3, escalando riscos para perfis mais seniores.
-- `implementador`: orienta implementacoes seguras com modelo-alvo Codex 5.4,
-  escopo pequeno, consistencia com o projeto e validacao proporcional.
+- `implementador-pleno`: orienta implementacoes seguras com modelo-alvo Codex
+  5.4, escopo pequeno, consistencia com o projeto e validacao proporcional.
+- `implementador-senior`: orienta implementacoes criticas com modelo-alvo Codex
+  5.5, julgamento senior, postura critica e validacao de riscos de producao.
 - `pr`: orienta criacao de pull requests com todos os testes executados antes
   da submissao, titulo claro e changelog completo para revisao.
 - `pr-review`: orienta revisoes tecnicas completas de pull requests por numero

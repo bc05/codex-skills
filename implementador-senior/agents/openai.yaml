@@ -1,0 +1,4 @@
+interface:
+  display_name: "Implementador Senior"
+  short_description: "Implementacao critica com Codex 5.5"
+  default_prompt: "Use $implementador-senior com o modelo gpt-5.5 para implementar mudancas criticas com julgamento senior, revisar riscos de producao e validar o resultado."

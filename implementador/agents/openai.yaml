@@ -1,4 +1,0 @@
-interface:
-  display_name: "Implementador"
-  short_description: "Implementacao segura com Codex 5.4"
-  default_prompt: "Use $implementador com o modelo gpt-5.4 para implementar a mudanca, preservar o padrao do projeto e validar o resultado."
