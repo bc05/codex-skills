@@ -36,3 +36,6 @@ CODEX_SKILLS_DIR=/caminho/para/skills ./scripts/install-skills.sh
 - `sb-migration`: orienta a aplicacao de SQLs da diff local no Supabase local,
   gera uma nova migration com `supabase db diff` e infere o idioma do nome pelo
   historico de migrations.
+- `ux`: orienta desenho, revisao e implementacao de experiencias UI/UX com
+  referencias atuais, tendencias de design, navegacao fluida, usabilidade,
+  acessibilidade e consistencia visual.

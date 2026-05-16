@@ -1,0 +1,4 @@
+interface:
+  display_name: "UX"
+  short_description: "Especialista em UI/UX e navegacao"
+  default_prompt: "Use $ux para revisar ou desenhar esta experiencia com referencias atuais, foco em usabilidade e navegacao fluida."
